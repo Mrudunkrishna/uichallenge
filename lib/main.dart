@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uichallenge/bottomtab/bottomtab.dart';
 import 'package:uichallenge/home.dart';
 
 void main() {
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: home()
+      home: BottomTabBar()
     );
   }
 }
