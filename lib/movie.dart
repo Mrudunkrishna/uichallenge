@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class home extends StatefulWidget {
-  const home({super.key});
+class movie extends StatefulWidget {
+  const movie({super.key});
 
   @override
-  State<home> createState() => _homeState();
+  State<movie> createState() => _movieState();
 }
 
-class _homeState extends State<home> {
+class _movieState extends State<movie> {
   bool _showImages = false;
   bool showimages = false;
   @override
@@ -28,10 +28,9 @@ class _homeState extends State<home> {
           Row(children: [
             SizedBox(width: 10,),
             Image.asset("assets/images/clapperboard.png",width: 30,height: 30,),
-            SizedBox(width: 5,),
             Text("CIMA",style: TextStyle(fontSize: 30),),
             Text("X",style: TextStyle(fontSize: 30,color: Color.fromRGBO(255, 204, 0, 1)),),
-            SizedBox(width: 240,),
+            SizedBox(width: 200,),
             Icon(Icons.search,size:36,)
           ],),
 
@@ -57,7 +56,7 @@ class _homeState extends State<home> {
                   height: 200, // Set height of the container
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle 111.jpg"),
+                      image: AssetImage("assets/images/jhonwick.png"),
                       fit: BoxFit.cover, // This property ensures the image covers the whole container
                     ),
                   ),
@@ -72,7 +71,7 @@ class _homeState extends State<home> {
                   height: 200, // Set height of the container
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/jhonwick.png"),
+                      image: AssetImage("assets/images/Rectangle 111.jpg"),
                       fit: BoxFit.cover, // This property ensures the image covers the whole container
                     ),
                   ),
@@ -96,9 +95,6 @@ class _homeState extends State<home> {
             ],
           ),
 
-
-          SizedBox(height: 25,),
-
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Container(color: Colors.white,
@@ -106,104 +102,6 @@ class _homeState extends State<home> {
               child: Row(children: [
 
                 SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Action",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-                //
-                //
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Thriller",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                //
-                //
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Drama",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                //
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Horror",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
 
 
 
@@ -217,7 +115,7 @@ class _homeState extends State<home> {
             children: [
               SizedBox(width: 15),
               Text(
-                "Trending",
+                "latest",
                 style: TextStyle(fontSize: 18),
               ),
               Spacer(), // Use Spacer to push See all button to the right
@@ -272,7 +170,7 @@ class _homeState extends State<home> {
             children: [
               SizedBox(width: 15),
               Text(
-                "Popular",
+                "Sci-fi",
                 style: TextStyle(fontSize: 18),
               ),
               Spacer(), // Use Spacer to push See all button to the right

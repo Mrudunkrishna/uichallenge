@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:uichallenge/home.dart';
+import 'package:uichallenge/movie.dart';
+import 'package:uichallenge/tv.dart';
 
 
 
@@ -15,8 +17,8 @@ class BottomTabBar extends StatelessWidget {
         body: TabBarView(
           children: [
             home(),
-            Text('data'),
-            Text('data'),
+            movie(),
+            Tv(),
             Text('data'),
           ],
         ),

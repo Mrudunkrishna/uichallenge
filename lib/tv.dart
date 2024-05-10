@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class home extends StatefulWidget {
-  const home({super.key});
+class Tv extends StatefulWidget {
+  const Tv({super.key});
 
   @override
-  State<home> createState() => _homeState();
+  State<Tv> createState() => _TvState();
 }
 
-class _homeState extends State<home> {
+class _TvState extends State<Tv> {
   bool _showImages = false;
   bool showimages = false;
   @override
@@ -26,17 +26,16 @@ class _homeState extends State<home> {
       body: SingleChildScrollView(
         child: Column(children: [
           Row(children: [
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             Image.asset("assets/images/clapperboard.png",width: 30,height: 30,),
-            SizedBox(width: 5,),
-            Text("CIMA",style: TextStyle(fontSize: 30),),
-            Text("X",style: TextStyle(fontSize: 30,color: Color.fromRGBO(255, 204, 0, 1)),),
-            SizedBox(width: 240,),
-            Icon(Icons.search,size:36,)
+            const Text("CIMA",style: TextStyle(fontSize: 30),),
+            const Text("X",style: TextStyle(fontSize: 30,color: Color.fromRGBO(255, 204, 0, 1)),),
+            const SizedBox(width: 200,),
+            const Icon(Icons.search,size:36,)
           ],),
 
 
-          SizedBox(height: 15,),
+          const SizedBox(height: 15,),
           CarouselSlider(
             options: CarouselOptions(
               height: 200.0,
@@ -45,7 +44,7 @@ class _homeState extends State<home> {
               aspectRatio: 16/9,
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
+              autoPlayAnimationDuration: const Duration(milliseconds: 800),
               viewportFraction: 0.8,
             ),
             items: [
@@ -55,9 +54,9 @@ class _homeState extends State<home> {
                 child: Container(
                   width: 400, // Set width of the container
                   height: 200, // Set height of the container
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle 111.jpg"),
+                      image: AssetImage("assets/images/bb.png"),
                       fit: BoxFit.cover, // This property ensures the image covers the whole container
                     ),
                   ),
@@ -70,9 +69,9 @@ class _homeState extends State<home> {
                 child: Container(
                   width: 400, // Set width of the container
                   height: 200, // Set height of the container
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/jhonwick.png"),
+                      image: AssetImage("assets/images/Rectangle 111.png"),
                       fit: BoxFit.cover, // This property ensures the image covers the whole container
                     ),
                   ),
@@ -85,9 +84,9 @@ class _homeState extends State<home> {
                 child: Container(
                   width: 400, // Set width of the container
                   height: 200, // Set height of the container
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/bb.png"),
+                      image: AssetImage("assets/images/jhonwick.png"),
                       fit: BoxFit.cover, // This property ensures the image covers the whole container
                     ),
                   ),
@@ -96,138 +95,35 @@ class _homeState extends State<home> {
             ],
           ),
 
-
-          SizedBox(height: 25,),
-
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Container(color: Colors.white,
               height: 60,
               child: Row(children: [
 
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Action",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-                //
-                //
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Thriller",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                //
-                //
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Drama",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                //
-                SizedBox(width: 15),
-                Container(
-                  width: 125,
-                  height: 35,
-                  child: Material(
-                    elevation: 5, // Adjust the elevation value as needed
-                    shadowColor: Colors.grey, // Adjust the shadow color as needed
-                    borderRadius: BorderRadius.circular(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Horror",
-                        style: TextStyle(color: Colors.black, fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(255, 204, 0, 1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-
-
+                const SizedBox(width: 15),
 
               ],),
             ),
           ),
 
 
-          SizedBox(height: 1,),
+          const SizedBox(height: 1,),
           Row(
             children: [
-              SizedBox(width: 15),
-              Text(
-                "Trending",
+              const SizedBox(width: 15),
+              const Text(
+                "latest",
                 style: TextStyle(fontSize: 18),
               ),
-              Spacer(), // Use Spacer to push See all button to the right
+              const Spacer(), // Use Spacer to push See all button to the right
               TextButton(
                 onPressed: () {
                   setState(() {
                     _showImages = !_showImages; // Toggle the visibility of images
                   });
                 },
-                child: Text(
+                child: const Text(
                   "See all",
                   style: TextStyle(fontSize: 15, color: Colors.black),
                 ),
@@ -246,7 +142,7 @@ class _homeState extends State<home> {
           ),
 
 
-          SizedBox(height: 20), // Add some space between text and containers
+          const SizedBox(height: 20), // Add some space between text and containers
           _showImages
               ? Column(
             children: [
@@ -261,28 +157,28 @@ class _homeState extends State<home> {
               ),
             ],
           )
-              : SizedBox(),
+              : const SizedBox(),
 
 
 
 
 
-          SizedBox(height: 1,),
+          const SizedBox(height: 1,),
           Row(
             children: [
-              SizedBox(width: 15),
-              Text(
-                "Popular",
+              const SizedBox(width: 15),
+              const Text(
+                "Drama",
                 style: TextStyle(fontSize: 18),
               ),
-              Spacer(), // Use Spacer to push See all button to the right
+              const Spacer(), // Use Spacer to push See all button to the right
               TextButton(
                 onPressed: () {
                   setState(() {
                     showimages = !showimages; // Toggle the visibility of images
                   });
                 },
-                child: Text(
+                child: const Text(
                   "See all",
                   style: TextStyle(fontSize: 15, color: Colors.black),
                 ),
@@ -301,7 +197,7 @@ class _homeState extends State<home> {
           ),
 
 
-          SizedBox(height: 20), // Add some space between text and containers
+          const SizedBox(height: 20), // Add some space between text and containers
           showimages
               ? Column(
             children: [
@@ -316,7 +212,7 @@ class _homeState extends State<home> {
               ),
             ],
           )
-              : SizedBox(),
+              : const SizedBox(),
 
 
 
